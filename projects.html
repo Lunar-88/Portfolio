@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felix's Porfolio</title>
+    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body class="bg-gray-900 text-white font-sans">
+    <!-- Navbar -->
+<nav class="flex justify-between items-center p-4 bg-gray-800 text-white relative">
+  <!-- Logo -->
+  <h1 class="font-bold text-lg">Portfolio</h1>
+
+  <!-- Desktop Menu -->
+  <ul class="hidden md:flex space-x-6">
+    <li><a href="index.html" class="hover:text-blue-400">Home</a></li>
+    <li><a href="about.html" class="hover:text-blue-400">About</a></li>
+    <li><a href="projects.html" class="hover:text-blue-400">Projects</a></li>
+    <li><a href="contact.html" class="hover:text-blue-400">Contact</a></li>
+  </ul>
+
+  <!-- Mobile Hamburger -->
+  <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
+    </svg>
+  </button>
+
+  <!-- Mobile Menu (hidden by default) -->
+  <ul id="menu" class="flex-col hidden absolute top-16 left-0 w-full bg-gray-800 flex flex-col space-y-4 p-4 md:hidden">
+    <li><a href="index.html" class="hover:text-blue-400">Home</a></li>
+    <li><a href="about.html" class="hover:text-blue-400">About</a></li>
+    <li><a href="projects.html" class="hover:text-blue-400">Projects</a></li>
+    <li><a href="contact.html" class="hover:text-blue-400">Contact</a></li>
+  </ul>
+</nav>
+
+    <!-- Projects Section -->
+    <section id="projects" class="px-6 py-6">
+      <h3 class="text-xl text-center font-bold mb-3">Projects</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        
+        <!-- Project Card 1 -->
+        <div class="bg-gray-800 rounded-lg p-4 shadow hover:shadow-xl transition">
+          <img src="images/autowraps.png" alt="Web App" class="rounded-md mb-3">
+          <h4 class="font-semibold">Autowraps</h4>
+          <p class="text-gray-400 text-sm">A wrapping company in Nairobi that offers wrapping and tinting services for vehicles.</p>
+        </div>
+        
+      </div>
+    </section>
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu");
+    
+      menuBtn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>    
+  </body>
+</html>

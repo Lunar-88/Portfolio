@@ -10,15 +10,34 @@
 </head>
 <body class="bg-gray-900 text-white font-sans">
     <!-- Navbar -->
-    <nav class="flex justify-between items-center p-4 bg-gray-800">
-      <h1 class="font-bold text-lg">Portfolio</h1>
-      <button class="md:hidden text-white focus:outline-none">
-        <!-- Hamburger Icon -->
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
-        </svg>
-      </button>
-    </nav>
+<nav class="flex justify-between items-center p-4 bg-gray-800 text-white relative">
+  <!-- Logo -->
+  <h1 class="font-bold text-lg">Portfolio</h1>
+
+  <!-- Desktop Menu -->
+  <ul class="hidden md:flex space-x-6">
+    <li><a href="index.html" class="hover:text-blue-400">Home</a></li>
+    <li><a href="about.html" class="hover:text-blue-400">About</a></li>
+    <li><a href="projects.html" class="hover:text-blue-400">Projects</a></li>
+    <li><a href="contact.html" class="hover:text-blue-400">Contact</a></li>
+  </ul>
+
+  <!-- Mobile Hamburger -->
+  <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
+    </svg>
+  </button>
+
+  <!-- Mobile Menu (hidden by default) -->
+  <ul id="menu" class="flex-col hidden absolute top-16 left-0 w-full bg-gray-800 flex flex-col space-y-4 p-4 md:hidden">
+    <li><a href="home.html" class="hover:text-blue-400">Home</a></li>
+    <li><a href="about.html" class="hover:text-blue-400">About</a></li>
+    <li><a href="projects.html" class="hover:text-blue-400">Projects</a></li>
+    <li><a href="contact.html" class="hover:text-blue-400">Contact</a></li>
+  </ul>
+</nav>
+
   
     <!-- Hero Section -->
     <section class="text-center p-6">
@@ -27,32 +46,32 @@
       <p class="text-gray-400 font-semibold mb-2">Full-Stack Developer</p>
       <div class="flex justify-center space-x-6 pt-2 pb-6 text-2xl text-gray-300">
         <!-- GitHub -->
-        <a href="https://github.com/yourusername" target="_blank" class="hover:text-white">
+        <a href="https://github.com/Lunar-88" target="_blank" class="hover:text-white">
           <i class="fab fa-github"></i>
         </a>
       
         <!-- Instagram -->
-        <a href="https://instagram.com/yourusername" target="_blank" class="hover:text-pink-500">
+        <a href="https://www.instagram.com/_.kemboi._/" target="_blank" class="hover:text-pink-500">
           <i class="fab fa-instagram"></i>
         </a>
       
         <!-- X (Twitter) -->
-        <a href="https://x.com/yourusername" target="_blank" class="hover:text-blue-400">
+        <a href="https://x.com/kemboifelix_" target="_blank" class="hover:text-blue-400">
           <i class="fab fa-x-twitter"></i>
         </a>
       
         <!-- LinkedIn -->
-        <a href="https://linkedin.com/in/yourusername" target="_blank" class="hover:text-blue-600">
+        <a href="www.linkedin.com/in/felix-kemboi-33b757369" target="_blank" class="hover:text-blue-600">
           <i class="fab fa-linkedin"></i>
         </a>
       
         <!-- TikTok -->
-        <a href="https://tiktok.com/@yourusername" target="_blank" class="hover:text-gray-100">
+        <a href="https://tiktok.com/kem.boi" target="_blank" class="hover:text-gray-100">
           <i class="fab fa-tiktok"></i>
         </a>
       </div>
       
-      <a href="#projects" class="bg-blue-600 hover:bg-blue-700 px-32 py-2 rounded-md font-medium">View Projects</a>
+      <a href="projects.html" class="bg-blue-600 hover:bg-blue-700 px-32 py-2 rounded-md font-medium">View Projects</a>
     </section>
   
     <!-- About Section -->
@@ -126,8 +145,13 @@
     <footer class="text-center p-4 bg-gray-800 mt-6 text-gray-400">
       © 2025 Felix Kemboi. All rights reserved.
     </footer>
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu");
+    
+      menuBtn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>    
   </body>
-  
-
-
 </html>

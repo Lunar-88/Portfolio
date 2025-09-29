@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-gray-200 font-sans">
+
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center p-4 bg-gray-800">
+    <h1 class="font-bold text-lg text-white">Portfolio</h1>
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex gap-6 text-white">
+      <li><a href="index.html" class="hover:text-blue-400">Home</a></li>
+      <li><a href="about.html" class="text-blue-400 font-semibold">About</a></li>
+      <li><a href="projects.html" class="hover:text-blue-400">Projects</a></li>
+      <li><a href="contact.html" class="hover:text-blue-400">Contact</a></li>
+    </ul>
+    <!-- Hamburger Button -->
+    <button class="md:hidden text-white focus:outline-none" id="menu-btn">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" 
+           viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" 
+              d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden bg-gray-900 md:hidden">
+    <ul class="flex flex-col">
+      <li><a href="index.html" class="block px-6 py-3 hover:bg-gray-700">Home</a></li>
+      <li><a href="about.html" class="block px-6 py-3 hover:bg-gray-700">About</a></li>
+      <li><a href="projects.html" class="block px-6 py-3 hover:bg-gray-700">Projects</a></li>
+      <li><a href="contact.html" class="block px-6 py-3 hover:bg-gray-700">Contact</a></li>
+    </ul>
+  </div>
+  
+
+  <!-- About Card -->
+  <section class="flex justify-center">
+    <div class="bg-gray-900 shadow-lg p-8 max-w-lg w-full text-center">
+      
+      <!-- Profile Image -->
+      <img src="images/Kemboi.png" alt="Profile Picture" 
+           class="w-48 h-48 mx-auto rounded-full shadow-2xl mb-4">
+
+      <!-- Name & Title -->
+      <h2 class="text-2xl font-bold text-white">Felix Kemboi</h2>
+      <p class="text-blue-400 font-semibold">Full-Stack Developer</p>
+      <p class="text-gray-400 mt-2 text-sm">
+        Passionate about creating innovative solutions
+      </p>
+
+      <!-- Experience -->
+      <div class="mt-8 text-left">
+        <h3 class="text-lg font-semibold text-white mb-3">Experience</h3>
+        <div class="p-3 mb-2">
+          <p class="text-white font-medium">I run a Web developement Agency</p>
+          <p class="text-gray-400 text-sm">2025 – Present</p>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="mt-8 text-left">
+        <h3 class="text-lg font-semibold text-white mb-3">Education</h3>
+        <div class="p-3">
+          <p class="text-white font-medium">Bachelor of Science in Computer Science</p>
+          <p class="text-gray-400 text-sm">JKUAT, Ongoing</p>
+        </div>
+      </div>
+
+      <!-- My Story -->
+      <div class="mt-8 text-left">
+        <h3 class="text-lg font-semibold text-white mb-3">My Story</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          I’m a full-stack developer with a passion for creating innovative solutions. 
+          I enjoy working on challenging projects and collaborating with talented teams. 
+          In my free time, I love hiking, playing guitar, and exploring new technologies.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-4 text-center">
+    <p>&copy; 2025 Your Name. All rights reserved.</p>
+  </footer>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
+</body>
+</html>
