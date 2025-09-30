@@ -9,26 +9,33 @@
 <body class="bg-gray-900 text-gray-200 font-sans">
 
   <!-- Navbar -->
-  <nav class="flex justify-between items-center p-4 bg-gray-800">
-    <h1 class="font-bold text-lg text-white">Portfolio</h1>
+  <nav class="flex items-center p-4 bg-gray-800 text-white relative">
+    <!-- Logo -->
+    <h1 class="font-bold text-lg md:text-2xl">Portfolio</h1>
+  
     <!-- Desktop Menu -->
-    <ul class="hidden md:flex gap-6 text-white">
+    <ul class="hidden md:flex space-x-6 md:pl-96 md:text-xl text-gray-200 md:font-semibold">
       <li><a href="index.html" class="hover:text-blue-400">Home</a></li>
-      <li><a href="about.html" class="text-blue-400 font-semibold">About</a></li>
+      <li><a href="about.html" class="hover:text-blue-400">About</a></li>
       <li><a href="projects.html" class="hover:text-blue-400">Projects</a></li>
       <li><a href="contact.html" class="hover:text-blue-400">Contact</a></li>
     </ul>
-    <!-- Hamburger Button -->
-    <button class="md:hidden text-white focus:outline-none" id="menu-btn">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" 
-           viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" 
-              d="M4 6h16M4 12h16m-7 6h7"></path>
+  
+    <!-- Mobile Hamburger -->
+    <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
       </svg>
     </button>
+  
+    <!-- Mobile Menu (hidden by default) -->
+    <ul id="menu" class="flex-col hidden absolute top-16 left-0 w-full bg-gray-800 flex flex-col space-y-4 p-4 md:hidden">
+      <li><a href="home.html" class="hover:text-blue-400">Home</a></li>
+      <li><a href="about.html" class="hover:text-blue-400">About</a></li>
+      <li><a href="projects.html" class="hover:text-blue-400">Projects</a></li>
+      <li><a href="contact.html" class="hover:text-blue-400">Contact</a></li>
+    </ul>
   </nav>
-
-  <!-- Mobile Menu -->
   <!-- Mobile Menu -->
 <div id="mobile-menu" class="hidden bg-gray-900 md:hidden">
     <ul class="flex flex-col">
@@ -57,18 +64,20 @@
 
       <!-- Experience -->
       <div class="mt-8 text-left">
-        <h3 class="text-lg font-semibold text-white mb-3">Experience</h3>
-        <div class="p-3 mb-2">
-          <p class="text-white font-medium">I run a Web developement Agency</p>
+        <h3 class="text-lg font-semibold text-gray-200">Experience</h3>
+        <div class="py-2 mb-2">
+          <p class="text-gray-300 font-medium">I run a Web developement Agency</p>
           <p class="text-gray-400 text-sm">2025 – Present</p>
         </div>
       </div>
 
       <!-- Education -->
-      <div class="mt-8 text-left">
-        <h3 class="text-lg font-semibold text-white mb-3">Education</h3>
-        <div class="p-3">
-          <p class="text-white font-medium">Bachelor of Science in Computer Science</p>
+      <div class="mt-4 text-left">
+        <h3 class="text-lg font-semibold text-gray-200">Education</h3>
+        <div class="py-2">
+          <p class="text-gray-300 font-medium">Full Stack Development Bootcamp.</p>
+          <p class="pb-2 text-gray-400 text-sm">Completed a Full-Stack development at Moringa School</p>
+          <p class="text-gray-200 font-medium">Bachelor of Science in Computer Science</p>
           <p class="text-gray-400 text-sm">JKUAT, Ongoing</p>
         </div>
       </div>

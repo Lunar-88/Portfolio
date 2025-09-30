@@ -12,10 +12,10 @@
     <!-- Navbar -->
 <nav class="flex justify-between items-center p-4 bg-gray-800 text-white relative">
   <!-- Logo -->
-  <h1 class="font-bold text-lg">Portfolio</h1>
+  <h1 class="font-bold text-lg md:text-2xl">Portfolio</h1>
 
   <!-- Desktop Menu -->
-  <ul class="hidden md:flex space-x-6">
+  <ul class="hidden md:flex space-x-6 md:mr-auto md:ml-120 md:text-xl text-gray-200 md:font-semibold">
     <li><a href="index.html" class="hover:text-blue-400">Home</a></li>
     <li><a href="about.html" class="hover:text-blue-400">About</a></li>
     <li><a href="projects.html" class="hover:text-blue-400">Projects</a></li>
@@ -32,8 +32,6 @@
   <!-- Mobile Menu (hidden by default) -->
   <ul id="menu" class="flex-col hidden absolute top-16 left-0 w-full bg-gray-800 flex flex-col space-y-4 p-4 md:hidden">
     <li><a href="home.html" class="hover:text-blue-400">Home</a></li>
-    <li><a href="about.html" class="hover:text-blue-400">About</a></li>
-    <li><a href="projects.html" class="hover:text-blue-400">Projects</a></li>
     <li><a href="contact.html" class="hover:text-blue-400">Contact</a></li>
   </ul>
 </nav>
@@ -71,13 +69,13 @@
         </a>
       </div>
       
-      <a href="projects.html" class="bg-blue-600 hover:bg-blue-700 px-32 py-2 rounded-md font-medium">View Projects</a>
+      <a href="https://wa.me/254759306105" class="bg-blue-600 hover:bg-blue-700 px-32 py-2 rounded-md font-medium">Contact Me</a>
     </section>
   
     <!-- About Section -->
     <section class="px-6 py-6">
       <h3 class="text-xl text-center font-bold mb-2">About Me</h3>
-      <p class="text-gray-300 leading-relaxed">
+      <p class="text-gray-300 leading-relaxed md:text-center md:max-w-2xl mx-auto">
         I'm a passionate full-stack developer with a focus on creating innovative and user-friendly web applications.
         With a strong foundation in both front-end and back-end technologies, I enjoy tackling complex challenges and
         delivering high-quality solutions.
@@ -85,7 +83,7 @@
     </section>
   
     <!-- Skills Section -->
-    <section class="px-6 py-6">
+    <section class="px-6 py-6 md:max-w-2xl mx-auto">
       <h3 class="text-xl text-center font-bold mb-3">Skills</h3>
       <div class="flex flex-wrap gap-2">
         <span class="flex items-center gap-2 bg-gray-700 px-3 py-1 rounded-md text-sm">
@@ -125,9 +123,31 @@
         </span>
       </div>      
     </section>
+
+    <!-- Education -->
+    <section class="max-w-2xl mx-auto px-6 py-6">
+      <div class="mt-4 text-left">
+        <h3 class="text-lg font-semibold text-center text-gray-200">Education</h3>
+        <div class="py-2">
+          <p class="text-gray-300 font-medium text-center">Full Stack Development Bootcamp.</p>
+          <p class="pb-2 text-gray-400 text-sm text-center">Completed a Full-Stack development at Moringa School</p>
+          <p class="text-gray-200 font-medium text-center">Bachelor of Science in Computer Science</p>
+          <p class="text-gray-400 text-sm text-center">JKUAT, Ongoing</p>
+        </div>
+      </div>
+      </section>
+  
+      <!-- Experience -->
+      <div class="mt-8 text-left">
+        <h3 class="text-lg font-semibold text-gray-200 text-center">Experience</h3>
+        <div class="py-2 mb-2">
+          <p class="text-gray-300 font-medium text-center">I run a Web developement Agency</p>
+          <p class="text-gray-400 text-sm text-center">2025 – Present</p>
+        </div>
+      </div>
   
     <!-- Projects Section -->
-    <section id="projects" class="px-6 py-6">
+    <section id="projects" class="px-6 py-6 md:max-w-4xl mx-auto">
       <h3 class="text-xl text-center font-bold mb-3">Projects</h3>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         
@@ -135,9 +155,15 @@
         <div class="bg-gray-800 rounded-lg p-4 shadow hover:shadow-xl transition">
           <img src="images/autowraps.png" alt="Web App" class="rounded-md mb-3">
           <h4 class="font-semibold">Autowraps</h4>
-          <p class="text-gray-400 text-sm">A wrapping company in Nairobi that offers wrapping and tinting services for vehicles.</p>
+          <p class="text-gray-400 text-sm">A wrapping company in Nairobi that offers car wrapping and window tinting services.</p>
         </div>
-        
+        <div>
+        <!-- Project Card 2 -->
+        <div class="bg-gray-800 rounded-lg p-4 shadow hover:shadow-xl transition">
+          <img src="images/phantom.png" alt="Mobile App" class="rounded-md mb-3">
+          <h4 class="font-semibold">Phantom</h4>
+          <p class="text-gray-400 text-sm">An automotive service company in Nairobi that offers wrapping services.</p>
+        </div>
       </div>
     </section>
   
